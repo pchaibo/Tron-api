@@ -1,0 +1,142 @@
+<include file="Public/header"/>
+<style>
+.sum span{color:red; margin-right: 20px;margin-left: 10px;}
+</style>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ibox float-e-margins">
+                <!--条件查询-->
+                <div class="ibox-title">
+                    <h5>用户管理</h5>
+                    <div class="ibox-tools">
+                        <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+                           style="cursor:pointer;">ဂ</i>
+                    </div>
+                </div>
+                <!--条件查询-->
+                <div class="ibox-content">
+                    <form class="layui-form" action="" method="get" autocomplete="off">
+                        <input type="hidden" name="m" value="<{$model}>">
+                        <input type="hidden" name="c" value="User">
+                        <input type="hidden" name="a" value="index">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <div class="layui-input-inline">
+                                    <input type="text" name="username" autocomplete="off" placeholder="商户号或用户名"
+                                           class="layui-input" value="<{$_GET['username']}>">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <div class="layui-input-inline">
+                                    <input type="text" name="parentid" autocomplete="off" placeholder="代理号或用户名"
+                                           class="layui-input" value="<{$_GET['parentid']}>">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <div class="layui-input-inline">
+                                    <select name="status">
+                                        <option value="">状态</option>
+                                        <option value="1">已激活</option>
+                                        <option value="0">未激活</option>
+                                        <option value="2">禁用</option>
+                                    </select>
+                                </div>
+                                <div class="layui-input-inline">
+                                    <select name="authorized">
+                                        <option value="">认证</option>
+                                        <option value="0">未认证</option>
+                                        <option value="2">等待审核</option>
+                                        <option value="1">认证用户</option>
+                                    </select>
+                                </div>
+                                <div class="layui-input-inline">
+                                    <select name="groupid">
+                                        <option value="">用户类型</option>
+                                        <option value="4">普通商户</option>
+                                        <option value="5">普通代理商</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" name="regdatetime" id="regtime"
+                                           placeholder="起始时间">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="submit" class="layui-btn"><span
+                                        class="glyphicon glyphicon-search"></span> 搜索
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </form>
+                    <!--用户列表-->
+                    <table class="layui-table" lay-data="{width:'100%',id:'userData'}" >
+                        <thead>
+                        <tr>
+                            <th lay-data="{field:'id',width:60}"></th>
+                            <th lay-data="{field:'memberid', width:80, sort: true}">商户号</th>
+                            <th lay-data="{field:'username', width:120}">用户名</th>
+                            <th lay-data="{field:'groupid', width:110}">用户类型</th>
+                            <th lay-data="{field:'parentid', width:120}">上级用户</th>
+                            <th  lay-data="{field:'jyamount', width:100}">总额</th>
+                            <td lay-data="{field:'tkmoney', width:100}">已提款</td>
+                            <td lay-data="{field:'blockedbalance', width:100}">冻结</td>
+                            <td lay-data="{field:'lessmoney', width:100}">扣款</td>
+                            <th lay-data="{field:'yue', width:100}">余额</th>
+                            <th  lay-data="{field:'balance', width:100}">可提现</th>
+                            <th lay-data="{field:'regdatetime', width:120}">注册时间</th>
+                           
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="list" id="vo">
+                            <tr id="dd" >
+                                <td><{$vo.id}></td>
+                                <td><a href="<{:U('User/changeuser',array('userid'=>$vo['id']))}>" target="_blank"><{$vo['id']|shanghubianhao=###}></a></td>
+                                <td><{$vo.username}></td>
+                                <td><{$vo['groupid']|usertype=###}></td>
+                                <td><{$vo['parentid']|getParentName=###}></td>
+                                
+                                
+                                <td><{$vo['jyamount']}></td>
+                                <td><{$vo['tkmoeny']}> </td>
+                                <td><{$vo.blockedbalance}></td>
+                                <td><{$vo['lessmoney']}></td>
+                                <td ><{$vo.yue}></td>
+                                <td ><if condition="$vo['yue'] neq $vo['balance'] "><span style="color:red"> <else /><span></if> <{$vo.balance}></span></td>
+                                <td><{$vo.regdatetime|date="Y-m-d",###}></td>
+                             
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                    <!--用户列表-->
+                    <div class="page"><{$page}></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['form','table',  'laydate', 'layer'], function () {
+        var form = layui.form
+            ,table = layui.table
+            , layer = layui.layer
+           , laydate = layui.laydate;
+
+        //日期时间范围
+        laydate.render({
+            elem: '#regtime'
+            , type: 'datetime'
+            ,theme: 'molv'
+            , range: '|'
+        });
+        //
+      
+    });
+</script>
+</body>
+</html>

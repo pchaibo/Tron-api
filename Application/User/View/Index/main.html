@@ -1,0 +1,189 @@
+<include file="Public/header"/>
+  <div class="row">
+      <div class="col-sm-12">
+      <div class="ibox float-e-margins">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>站内公告</h5>
+        </div>
+        <div class="ibox-content" style="padding:14px 20px;">
+          <ul class="list-unstyled">
+            <volist name="gglist" id="vo">
+              <li><mark><{$vo.createtime|time_format}></mark> <{$vo.title}></li>
+            </volist>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+   <div class="col-md-6">
+    <div class="ibox float-e-margins">
+      <div class="ibox-title"><h5>今日交易统计</h5></div>
+      <div class="ibox-content no-padding">
+        <div class="panel-body">
+          <div id="dday" style="height: 180px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <div class="col-sm-3">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>收入</h5>
+        </div>
+        <div class="ibox-content" style="height: 210px;">
+          <h1 class="no-margins"><{$fans['balance']}></h1>
+          <div class="stat-percent font-bold text-success">元</div>
+          <small>可提现</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>冻结</h5>
+        </div>
+        <div class="ibox-content" style="height: 210px;">
+          <h1 class="no-margins"><{$fans['blockedbalance']}></h1>
+          <div class="stat-percent font-bold text-info">元
+          </div>
+          <small>待解冻</small>
+        </div>
+      </div>
+    </div>
+
+  
+ 
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>日交易统计</h5>
+        </div>
+        <div class="ibox-content">
+          <div id="main" style="height:300px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<include file="dealrecordlModal" />
+<!-- 全局js -->
+<script src="<{$siteurl}>Public/Front/js/jquery.min.js"></script>
+<script src="<{$siteurl}>Public/Front/js/bootstrap.min.js"></script>
+<script src="<{$siteurl}>Public/Front/js/content.js?v=1.0.0"></script>
+<script src="/Public/Front/js/echarts.common.min.js"></script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('main'));
+    var option = {
+        title : {
+            text: '交易订单概况',
+            subtext: '按天统计'
+        },
+        tooltip : {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['成交','金额']
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        calculable : true,
+        xAxis : [
+            {
+                type : 'category',
+                boundaryGap : false,
+                data : <{$category}>
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'成交',
+                type:'line',
+                smooth:true,
+                itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                data:<{$dataone}>
+            },
+            {
+                name:'金额',
+                type:'line',
+                smooth:true,
+                itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                data:<{$datatwo}>
+            }
+        ]
+    };
+
+    // 为echarts对象加载数据
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+// 使用刚指定的配置项和数据显示图表。
+var myChartday = echarts.init(document.getElementById('dday'));
+myChartday.setOption({
+    title:{
+        text:'实时统计(共<{$ddata.num}>笔)',
+        x:'center'
+    },
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        x: 'left',
+        data:['今日交易金额','今日收入金额','今日支持金额']
+    },
+    series: [
+        {
+            name:'交易统计',
+            type:'pie',
+            radius: ['50%', '70%'],
+            avoidLabelOverlap: false,
+            //radius : '65%',
+            //selectedMode: 'single',
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '14',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:"<{$ddata.amount}>", name:'今日交易金额'},
+                {value:"<{$ddata.rate}>", name:'今日手续费金额'},
+                {value:"<{$ddata.total}>", name:'今日收入金额'},
+            ]
+        }
+    ]
+});
+</script>
+</body>
+</html>

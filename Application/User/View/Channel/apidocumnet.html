@@ -1,0 +1,26 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>API设置</h5>
+            </div>
+            <!--条件查询-->
+            <div class="ibox-content">
+                <address>
+                    <strong>API对接参数：</strong><br>
+                    商户号：<{$fans['uid']+10000}><br>
+                    网关地址：<{$website['usergateway']}>/Pay_Index.html<br>
+                    <abbr title="密钥">APIKEY:</abbr> <{$info['apikey']}>
+                </address>
+                <address>
+                    <strong>对接Demo下载</strong><br>
+                    <a href=" /doc.html">API文档及示例.</a>
+                </address>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+</body>
+</html>

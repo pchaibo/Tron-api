@@ -1,0 +1,381 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html>
+
+
+<head>
+
+
+    <title><{$sitename}> </title>
+
+
+    <meta name="keywords" content="<{$sitename}> " />
+
+
+    <meta name="description" content="<{$sitename}> ，带给您安全快捷的网上付款体验,为您提供代收服务，稳定,快捷,诚信" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+
+
+    <meta name="renderer" content="webkit">
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+
+    <link href="css/style.css?20170828" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">  
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">  
+
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+
+
+    <script src="js/formvalidator.js"></script>
+
+
+    <script src="js/formValidatorRegex.js?1"></script>
+
+
+    <script src="js/layer.js"></script>
+
+
+    <script src="js/kefu.js"></script>
+
+
+    <!--[if lte IE 9]>
+
+
+        <script src="js/html5.min.js"></script>
+
+
+        <script src="js/respond.min.js"></script>
+
+
+    <![endif]-->
+
+
+</head>
+<style>
+body{background-color: rgb(30, 61, 74);}
+</style>
+
+<body>
+<!-- 
+
+    <div id="floatTools" class="float0831" style="z-index:99999">
+
+
+        <div class=floatL>
+
+
+            <a id=aFloatTools_Show class=btnOpen style="DISPLAY:none;"
+
+
+               title=查看在线客服
+
+
+               onclick="javascript: $('#divFloatToolsView').animate({ width: 'show', opacity: 'show' }, 'normal', function () { $('#divFloatToolsView').show(); kf_setCookie('RightFloatShown', 0, '', '/', 'www.aoloy.cn'); }); $('#aFloatTools_Show').attr('style', 'display:none'); $('#aFloatTools_Hide').attr('style', 'display:block');"
+
+
+               href="javascript:void(0);">展开</a> <a style="DISPLAY:;" id=aFloatTools_Hide class=btnCtn
+
+
+                                                    title=关闭在线客服
+
+
+                                                    onclick="javascript: $('#divFloatToolsView').animate({ width: 'hide', opacity: 'hide' }, 'normal', function () { $('#divFloatToolsView').hide(); kf_setCookie('RightFloatShown', 1, '', '/', 'www.aoloy.cn'); }); $('#aFloatTools_Show').attr('style', 'display:block'); $('#aFloatTools_Hide').attr('style', 'display:none');"
+
+
+                                                    href="javascript:void(0);">收缩</a>
+
+
+        </div>
+		
+
+        <div id=divFloatToolsView class=floatR style="DISPLAY:;">
+
+
+            <div class="tp"></div>
+			<!--  
+
+            <div class="cn">
+	
+
+                <ul>
+
+
+                    <div style="text-align:center;">
+
+
+                        <strong>客服中心</strong>
+
+
+                    </div>
+
+
+                    <li class="top">
+
+
+                        <h3 class="titZx">QQ客服</h3>
+
+
+                    </li>
+					
+
+                    <li><a class="icoTc" href="http://wpa.qq.com/msgrd?v=3&amp;uin=913459999&amp;site=qq&amp;menu=yes">913459999</a> </li>
+
+
+                    <li class="bot"><a class="icoTc" href="http://wpa.qq.com/msgrd?v=3&amp;uin=763459999&amp;site=qq&amp;menu=yes">763459999</a> </li>
+
+
+                    <li class="bot"><a class="icoTc" href="http://wpa.qq.com/msgrd?v=3&amp;uin=767559999&amp;site=qq&amp;menu=yes">767559999</a> </li>
+
+
+                    <li class="bot"><a class="icoDh" href="skype:767559999@qq.com?call" target="_blank">Skype Call</a> </li>
+
+
+                </ul>
+
+
+            </div>
+		
+
+        </div>
+	
+
+    </div>
+-->
+<!-- 
+<div id="bgimg" class="clearfix">
+
+        <img src="images/alog.jpg" />
+
+    </div>
+ -->
+
+
+    
+
+  
+
+
+  
+
+
+    <div id="login-box">
+
+
+        <div class="logo-big fc">
+
+
+
+
+
+            <img src="images/logo.png" />
+
+
+        </div>
+
+
+        
+
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+
+
+        $.formValidator.initConfig({
+
+
+            autotip: false,
+
+
+            formid: "myform", onerror: function (msg) {
+
+
+                layer.alert(msg)
+
+
+            }
+
+
+        });
+
+
+        $("#UserName").formValidator({ onshow: "请输入商户账号", onfocus: "请输入商户账号", oncorrect: "&nbsp;" }).inputValidator({ min: 3, max: 16, onerror: "商户账号能不少5位" });
+
+        $("#Pwd").formValidator({ onshow: "请输入密码", onfocus: "请输入密码", oncorrect: "&nbsp;" }).inputValidator({ min: 6, max: 16, onerror: "密码长度为6-16位" });
+
+
+    })
+
+
+</script>
+
+
+    <div class="H30"></div>
+
+
+    <form class="fc form-horizontal" action='<{:U("User/Login/checklogin")}>'  method="post" autocomplete="off" id="myform">
+
+
+        <div class="form-group">
+
+
+            <div class="col-xs-12">
+
+
+                <input class="form-control" id="UserName" name="username" placeholder="请输入商户账号" type="text" />
+
+
+                <i class="fa fa-user form-control-feedback"></i>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="form-group">
+
+
+            <div class="col-xs-12">
+
+
+                <input style="display:none">
+
+
+                <input class="form-control" id="Pwd" name="password" placeholder="请输入商户登录1密码" type="password" />
+
+
+                <i class="fa fa-lock form-control-feedback"></i>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="form-group">
+
+
+            <div class="col-xs-12">
+
+
+                <input class="form-control pull-left" id="verifycode" name="varification" placeholder="请输入验证码" style="width:140px" type="text" value="" />
+
+
+                <i class="fa fa-shield form-control-feedback"></i>
+
+
+                <img src="<{:U('User/Login/verifycode')}>" class="pull-right imgcode" style="height: 41px; width: 100px; cursor: pointer" onclick="javascript: this.src = 'User_Login_verifycode.html?t=' + Math.random()">
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="H10"></div>
+
+
+        <div class="prompt" style="display: none;">
+
+
+            <div class="prompt-error"></div>
+
+
+        </div>
+
+
+        <div class="H10"></div>
+
+
+        <div class="form-group">
+
+
+            <div class="col-xs-12">
+
+
+                <button type="submit" class="btn btn-block btn-success btn-lg">确定登陆</button>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="stat">
+			
+
+
+            <a href="/User_login_register.html">注册账号</a>
+
+
+            <a href="#" onclick="alert('请联系客服')" class="pull-right">找回密码</a>
+
+
+        </div>
+
+
+    </form>
+
+
+
+
+
+
+
+
+     </div>
+
+
+    <div class="footer-box2">
+
+
+        <div class="footer2">
+
+
+            <a href="http://www.miitbeian.gov.cn/" target="_blank"><{$website['icp']}></a>
+           	</div>
+
+
+    </div>
+
+
+
+
+
+        <script src="js/bootstrap.min.js"></script>
+
+
+        <script src="js/bootbox.min.js"></script>
+
+
+        <script src="js/login.js"></script>
+
+
+</body>
+
+
+</html>
+
+

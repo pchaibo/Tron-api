@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title><{$sitename}>-新用户注册</title>
+    <meta name="keywords" content="<{$sitename}>-新用户注册" />
+    <meta name="description" content="<{$sitename}>-新用户注册，带给您安全快捷的网上付款体验,为您提供代收服务，稳定,快捷,诚信" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta name="renderer" content="webkit">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css?20170828" rel="stylesheet" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/formvalidator.js"></script>
+    <script src="js/formValidatorRegex.js?1"></script>
+    <script src="js/layer.js"></script>
+    <script src="js/kefu.js"></script>
+    <!--[if lte IE 9]>
+        <script src="js/html5.min.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>	<!-- 
+    <div id="floatTools" class="float0831" style="z-index:99999">
+        <div class=floatL>
+            <a id=aFloatTools_Show class=btnOpen style="DISPLAY:none;"
+               title=查看在线客服
+               onclick="javascript: $('#divFloatToolsView').animate({ width: 'show', opacity: 'show' }, 'normal', function () { $('#divFloatToolsView').show(); kf_setCookie('RightFloatShown', 0, '', '/', 'www.aoloy.cn'); }); $('#aFloatTools_Show').attr('style', 'display:none'); $('#aFloatTools_Hide').attr('style', 'display:block');"
+               href="javascript:void(0);">展开</a> <a style="DISPLAY:;" id=aFloatTools_Hide class=btnCtn
+                                                    title=关闭在线客服
+                                                    onclick="javascript: $('#divFloatToolsView').animate({ width: 'hide', opacity: 'hide' }, 'normal', function () { $('#divFloatToolsView').hide(); kf_setCookie('RightFloatShown', 1, '', '/', 'www.aoloy.cn'); }); $('#aFloatTools_Show').attr('style', 'display:block'); $('#aFloatTools_Hide').attr('style', 'display:none');"
+                                                    href="javascript:void(0);">收缩</a>
+        </div>	 
+        <div id=divFloatToolsView class=floatR style="DISPLAY:;">
+            <div class="tp"></div>
+            <div class="cn">
+                <ul>
+                    <div style="text-align:center;">
+                        <strong>客服中心</strong>
+                    </div>
+                    <li class="top">
+                        <h3 class="titZx">QQ客服</h3>
+                    </li>
+                    <li><a class="icoTc" href="http://wpa.qq.com/msgrd?v=3&amp;uin=913459999&amp;site=qq&amp;menu=yes">913459999</a> </li>
+                    <li class="bot"><a class="icoTc" href="http://wpa.qq.com/msgrd?v=3&amp;uin=763459999&amp;site=qq&amp;menu=yes">763459999</a> </li>
+                    <li class="bot"><a class="icoTc" href="http://wpa.qq.com/msgrd?v=3&amp;uin=767559999&amp;site=qq&amp;menu=yes">767559999</a> </li>
+                    <li class="bot"><a class="icoDh" href="skype:767559999@qq.com?call" target="_blank">Skype Call</a> </li>
+                </ul>
+            </div>
+        </div>	
+    </div> -->
+    <div id="bgimg" class="clearfix">
+        <img src="images/index.jpg" />
+    </div>
+    <div id="login-box">
+        <div class="logo-big fc">
+
+            <img src="images/logo.png" />
+        </div>
+        
+<script type="text/javascript">
+    $(document).ready(function () {/* 
+        $.formValidator.initConfig({
+            autotip: false,
+            formid: "myform", onerror: function (msg) {
+                layer.alert(msg)
+            }
+        });
+        $("#username").formValidator({ onshow: "请输入登录用户", onfocus: "请输入登录用户", oncorrect: "&nbsp;" }).inputValidator({ min: 6, max: 16, onerror: "用户长度为6-16位" });        $("#PWD").formValidator({ onshow: "请输入密码", onfocus: "请输入密码", oncorrect: "&nbsp;" }).inputValidator({ min: 6, max: 16, onerror: "密码长度为6-16位" });        $("#ConfirmPWD").formValidator({ onshow: "请再次输入新密码", onfocus: "请输入再次输入新密码", oncorrect: "&nbsp;" }).compareValidator({ desid: "PWD", operateor: "=", onerror: "两次密码输入不同。" });        $("#email").formValidator({ onshow: "请输入登录邮件地址", onfocus: "请输入登录邮件地址", oncorrect: "&nbsp;" }).regexValidator({ regexp: "email", datatype: "enum", onerror: "请输入正确的邮件地址" });
+        $("#verCode").formValidator({ onshow: "请输入邀请码", onfocus: "请输入邀请码", oncorrect: "&nbsp;" }).inputValidator({ min: 6, max: 60, onerror: "请输入邀请码" });        $("#Verify").formValidator({ onshow: "请输入验证码", onfocus: "请输入验证码", oncorrect: "&nbsp;" }).inputValidator({ min: 4, onerror: "请输入验证码" }); */    })
+</script>
+    <style>
+        .geetest {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+        }
+
+        .bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: gray;
+            opacity: 0.7;
+        }
+
+        .wrap {
+            width: 300px;
+            margin: 200px auto;
+            text-align: center;
+            background-color: #fff;
+            z-index: 2;
+            position: relative;
+        }
+
+        .gt_wrapper {
+            margin: 0 auto;
+        }
+
+        .wrap .top {
+            padding: 0 8px;
+            height: 44px;
+            z-index: 1;
+            position: relative;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .wrap .title {
+            line-height: 45px;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .exit {
+            background-image: url('images/return.png');
+            -moz-background-size: 12px auto;
+            -o-background-size: 12px auto;
+            -webkit-background-size: 12px auto;
+            background-size: 12px auto;
+            width: 12px;
+            height: 22px;
+            display: inline-block;
+            vertical-align: middle;
+            position: absolute;
+            left: 8px;
+            top: 11px;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            z-index: 10;
+        }
+
+            .exit:active {
+                background-image: url('images/return_hover.png');
+            }
+    </style>
+    <script src="js/gt.js"></script>
+    <script src="js/common.js"></script>
+    <div class="geetest" id="codebox">
+        <div class="bg"></div>
+        <div class="wrap">
+            <div id="captcha" style="width:100%"></div>
+        </div>
+
+    </div>
+<div class="H30"></div>
+<form class="fc form-horizontal" data-animate-effect="fadeInRight" role="form" id="Formreg" method="post" action="<{:U("User/Login/checkRegister")}>" autocomplete="off">
+    <div class="form-group">
+        <div class="col-xs-12">
+            <input class="form-control" id="username" name="username" placeholder="请输入登录用户名 " type="text" value="" />
+            <i class="fa fa-user form-control-feedback"></i>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-12">
+            <input class="form-control" id="PWD" name="PWD" placeholder="请输入登陆密码" type="password" />
+            <i class="fa fa-lock form-control-feedback"></i>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-12">
+            <input class="form-control" id="ConfirmPWD" name="ConfirmPWD" placeholder="请输入确认密码" type="password" />
+            <i class="fa fa-lock form-control-feedback"></i>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-12">
+            <input class="form-control" id="email" name="email" placeholder="请输入您的邮箱" type="text" value="" />
+            <i class="fa fa-user form-control-feedback"></i>
+        </div>
+    </div>
+     <div class="form-group">        <div class="col-xs-12">            <input class="form-control pull-left" id="verCode" name="invitecode" placeholder="注册邀请码"  type="text" value="" />            <i class="fa fa-shield form-control-feedback"></i>        </div>    </div> 
+    <div class="form-group">
+        <div class="col-xs-12">
+            <input class="form-control pull-left" id="verifycode" name="Verify" placeholder="请输入验证码" style="width:140px" type="text" value="" />
+            <i class="fa fa-shield form-control-feedback"></i>
+            <img src="<{:U('User/Login/verifycode')}>" class="pull-right imgcode" style="height: 41px; width: 100px; cursor: pointer" onclick="javascript: this.src = '<{:U('User/Login/verifycode')}>?t=' + Math.random()">
+        </div>
+    </div>    
+     
+    <div class="form-group">
+        <div class="col-xs-12">
+            <button type="submit" class="btn btn-block btn-success btn-lg">注册账号</button>
+        </div>
+    </div>
+    <div class="stat">
+        <a href="/" class="pull-left">商户登录</a>
+       <a href="#" onclick="alert('请联系客服')" class="pull-right">找回密码</a>
+    </div>
+</form>
+
+
+     </div>
+    <div class="footer-box2">
+        <div class="footer2">
+            <a href="http://www.miitbeian.gov.cn/" target="_blank"><{$website['icp']}></a></div>
+    </div>
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootbox.min.js"></script>
+        <script src="js/login.js"></script>                <script src="/Public/Front/js/bootstrap.min.js"></script>		<script src="/Public/Front/bootstrapvalidator/js/bootstrapValidator.min.js"></script>		<script src="Public/Front/js/plugins/zxcvbn/4.4.2/zxcvbn.js"></script>		<script src="/Public/Front/js/plugins/layer/layer.min.js"></script>		<script src="/Public/Front/login/js/modernizr-2.6.2.min.js"></script>
+</body><script>    $(document).ready(function() {        $('form').bootstrapValidator({            //container: '#messages',            message: 'This value is not valid',            feedbackIcons: {            valid: 'glyphicon glyphicon-ok',            invalid: 'glyphicon glyphicon-remove',            validating: 'glyphicon glyphicon-refresh'            },            fields: {                username: {                    message: '用户名验证失败',                    validators: {                        notEmpty: {                            message: '用户名不能为空'                        },                        different: {                            field: 'password',                            message: '用户名不能和密码相同'                        },                        threshold:6,                        stringLength: {                            min: 5,                            max: 20,                            message: '用户名长度必须在5到20之间'                        },                        remote:{                            url: "/User_Login_checkuser.html",                            message: '用户已存在',                            delay :  1000,                            type: 'POST'                        },                        regexp: {                            regexp: /^[a-zA-Z0-9_\.]+$/,                            message: '用户名由数字字母下划线和.组成'                        }                    }                },                password: {                    validators: {                        notEmpty: {                            message: '密码不能为空'                        },                        identical: {                            field: 'confirmpassword',                            message: '两次密码不一致'                        },                        different: {                            field: 'username',                            message: '不能和用户名相同'                        },                        stringLength: {                            min: 6,                            max: 30,                            message: '密码长度在6到30之间'                        }                    }                },                confirmpassword: {                    message: '确认密码无效',                    validators: {                        notEmpty: {                            message: '确认密码不能为空'                        },                        stringLength: {                            min: 6,                            max: 30,                            message: '用户名长度必须在6到30之间'                        },                        identical: {                        field: 'password',                        message: '两次密码不一致'                        },                        different: {                        field: 'username',                        message: '不能和用户名相同'                        }                    }                },                email: {                    message: '邮件验证失败',                    validators: {                        notEmpty: {                            message: '邮件不能为空'                        },                        remote:{                            url: "/User_Login_checkemail.html",                            message: '用户已存在',                            delay :  1000,                            type: 'POST'                        },                        regexp:{                            regexp:/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,                            message: '邮件格式有误，请核对'                        }                    }                },                invitecode: {                    message: '邀请码验证失败',                    validators: {                        notEmpty: {                            message: '邀请码不能为空'                        },                        remote:{                            url: "/User_Login_checkinvitecode.html",                            message: '邀请码无效',                            delay :  1000,                            type: 'POST'                        },                    }                },            }        }).on('success.form.bv', function(e) {            e.preventDefault();            var $form = $(e.target);            var bv = $form.data('bootstrapValidator');            $.post($form.attr('action'), $form.serialize(), function(res) {                if(res.errorno){                    layer.msg(res.msg ? res.msg : '注册失败,请重新提交，谢谢！', {                        time: 20000, //20s后自动关闭                        btn: ['知道了'],                        yes:function(){                            window.location.reload();                        }                    });                }else{                    var data = res.msg;                    layer.open({                        type: 1                        ,title: false                        ,closeBtn: false                        ,area: '300px;'                        ,shade: 0.8                        ,id: 'LAY_layuipro' //设定一个id，防止重复弹出                        ,resize: false                        ,btn: ['立刻激活', '晚点再说']                        ,btnAlign: 'c'                        ,moveType: 1 //拖拽模式，0或者1                        ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">' +                        '<h3>恭喜您，注册成功！</h3>' +                        '<p>我们已发送了一封验证邮件到 <strong>'+data.email+'</strong>, 请注意查收您的邮箱，点击其中的链接激活您的账号！</p>' +                        '<p>如果您未收到验证邮件，请联系管理员重新发送验证邮件或手动帮您激活账号。</p>' +                        '<p>管理员联系方式：<p><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin='+data.qq+'&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:'+data.qq+':51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></div>'                        ,success: function(layero){                            var btn = layero.find('.layui-layer-btn');                            btn.find('.layui-layer-btn0').attr({href: data.mail,target: '_blank'});                        }                    });                }            }, 'json');        });});</script>
+</html>
