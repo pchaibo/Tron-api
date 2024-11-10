@@ -10,5 +10,5 @@
 * 
 
 ## 安装
-* 需要可以TG: @syga22 
+* Telegram: @syga22 
 * 邮箱:cqhaibo800@gmail.com
