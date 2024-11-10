@@ -6,8 +6,6 @@ import (
 	"io"
 	"log"
 	"os"
-	"shop/controllers/common"
-	"shop/routers"
 
 	"gopkg.in/ini.v1"
 )
@@ -27,8 +25,8 @@ func main() {
 	// res, _ := exec.Command("python", "-V").Output()
 	// fmt.Println(string(res))
 	//Commtest()
-	go Trc20canBlock() //扫块
-	Start()
+	Trc20canBlock() //扫块
+	//Start()
 }
 
 func Start() {
