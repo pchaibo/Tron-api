@@ -26,7 +26,9 @@ try {
 
     // Data
     echo $contract->name();
+    echo "<br/>";
     echo $contract->symbol();
+    echo "<br/>";
     //查询
     echo $contract->balanceOf('TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t');
     echo "<br/>";
