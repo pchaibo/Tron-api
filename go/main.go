@@ -2,12 +2,9 @@ package main
 
 import (
 	"bytes"
-	"fmt"
 	"io"
 	"log"
 	"os"
-
-	"gopkg.in/ini.v1"
 )
 
 var logs *log.Logger
@@ -27,21 +24,4 @@ func main() {
 	//Commtest()
 	Trc20canBlock() //扫块
 	//Start()
-}
-
-func Start() {
-	conf, err := ini.Load("./conf/app.conf")
-	if err != nil {
-		fmt.Print(err)
-	}
-	ip := conf.Section("server").Key("ip").String()
-	runmode := conf.Section("server").Key("runmode").String()
-	s := routers.Routerinit(runmode)
-	s.Run(ip)
-}
-
-// 测试
-func Commtest() {
-	common.Getcpu()
-	//common.Getcpuload()
 }

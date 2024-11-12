@@ -20,7 +20,8 @@ import (
 )
 
 const (
-	apiURL          = "https://api.trongrid.io"
+	apiURL = "https://api.trongrid.io"
+	//apiURL          = "https://nile.trongrid.io"
 	contractAddress = "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t" // 替换为你要监控的 TRC20 合约地址
 
 )
@@ -106,15 +107,19 @@ func Trc20canBlock() {
 	// 获取每个区块的交易记录
 	for startBlock > 0 {
 		blockURL := fmt.Sprintf("%s/wallet/getblockbynum?num=%d", apiURL, startBlock)
+		//51838699
+		//blockURL = fmt.Sprintf("%s/wallet/getblockbynum?num=51838699", apiURL)
 		go Setdata(blockURL, logfile)
 		startBlock++
 		time.Sleep(3 * time.Second)
+		//os.Exit(0)
 	}
 
 }
 
 func Setdata(blockURL string, logfile *os.File) {
 	log.SetOutput(logfile)
+	stra_t := time.Now()
 	blockBody, err := Getdata(blockURL)
 	if err != nil {
 		log.Println("eorr:", blockURL)
@@ -178,7 +183,7 @@ func Setdata(blockURL string, logfile *os.File) {
 					// }
 					//fmt.Println(amountk)
 					fmt.Printf("num: %d from: %s   toaddress: %s amount: %.2f \n", block.BlockNumber, Gettronhex(owner_address), Gettronhex(toaddress), amountk)
-					time.Sleep(100 * time.Millisecond)
+					//time.Sleep(100 * time.Millisecond)
 				}
 
 			}
@@ -187,4 +192,6 @@ func Setdata(blockURL string, logfile *os.File) {
 
 		return true
 	})
+	end_t := time.Since(stra_t)
+	fmt.Printf("end %v  \n", end_t)
 }
