@@ -50,9 +50,11 @@ include_once './vendor/autoload.php';
 try {
     //
     $tron = new \IEXBase\TronAPI\Tron();
+    $str="card uuuuuu cliff iiii proud junk fffff fine riot defy test lllll";
     
-    $hex = $tron->toHex('TF6G3uUhJGyaVLBzwjV66YaMAXkAvsamKH');//TF6G3uUhJGyaVLBzwjV66YaMAXkAvsamKH
-    echo "hex:".$hex."<br/>";
+     $hex = $tron->toHex('TF6G3uUhJGyaVLBzwjV66YaMAXkAvsamKH');//TF6G3uUhJGyaVLBzwjV66YaMAXkAvsamKH
+     echo "hex:".$hex."<br/>";
+     $tron->toTron('');
     //41e552f6487585c2b58bc2c9bb4492bc1f17132cd0
     // $hex = $tron->fromHex('41e552f6487585c2b58bc2c9bb4492bc1f17132cd0');
     // echo "hex:".$hex."<br/>";
@@ -61,13 +63,13 @@ try {
     $isValid = $tron->isAddress($generateAddress->getAddress());
 
 
-    echo '地址Address hex: '. $generateAddress->getAddress();
+    echo 'Address hex: '. $generateAddress->getAddress();
     echo '<br/>Address base58: '. $generateAddress->getAddress(true);
     echo '<br/>Private key: '. $generateAddress->getPrivateKey();
-    echo '<br/>Public key: '. $generateAddress->getPublicKey();
-    echo '<br/>Is Validate: '. $isValid;
-    echo "<pre>";
-    echo '<br/>Raw data: ';print_r($generateAddress->getRawData());
+    // echo '<br/>Public key: '. $generateAddress->getPublicKey();
+    // echo '<br/>Is Validate: '. $isValid;
+    // echo "<pre>";
+    // echo '<br/>Raw data: ';print_r($generateAddress->getRawData());
 
 } catch (\IEXBase\TronAPI\Exception\TronException $e) {
     echo $e->getMessage();
