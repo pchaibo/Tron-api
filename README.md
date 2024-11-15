@@ -6,7 +6,7 @@
 >### 3.配置项目伪静态
 >### 4.合约地址不需要动，切记别改
 >### 5.ThinkPHP5基本运行要求
-## 重点功能
+## 目前功能
 * 生成钱包地址
 * 获取USDT余额
 * 获取TRX余额
@@ -18,10 +18,6 @@
 * TRX交易转账
 * 查询最新交易（USDT）
 * 扫区块链对地址异步通知
-## 设置
-* 
-* 后台地址 http://127.0.0.203/admin
-
 
 ------------
 
@@ -29,7 +25,16 @@
 * Telegram: @zhang8080
 * qq :386378183
 * 邮箱:cqhaibo800@gmail.com
+------------
+## 后台显示
 
+* 地址列表
+
+![image](https://github.com/pchaibo/usdtpay/blob/master/add.png)
+
+* 转账记录
+
+![image](https://github.com/pchaibo/usdtpay/blob/master/order.png)
 ------------
 ## TRC20
 ------------
