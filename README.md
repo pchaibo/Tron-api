@@ -40,7 +40,7 @@
 * 邮箱:cqhaibo800@gmail.com
 ------------
 ## 后台显示
-### USDT（500~USDT）
+### USDT（300~USDT）
 
 ##### address：TSPuEaWv1JM51r1yznPRRa9yPJRz96aHYA
 
