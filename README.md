@@ -147,7 +147,7 @@
 "from_address": "TF6G3uUhJGyaVLBzwjV66YaMAXkAvsamKH",
 "address": "TANLLpnqPMSuZTYeoe2rCuPw1R6usnHTJH",
 "amount": 3.2,
-"url": "https://nile.trongrid.io",
+"url": "https://api.trongrid.io",
 "txid": "c4f6720f754519adb734d70dffaa745fe9b87ad2a301bfd049fd0147182f00b4",
 "symbol": "usdt",
 "type": 2,
