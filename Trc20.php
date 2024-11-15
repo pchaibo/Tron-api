@@ -9,18 +9,20 @@ use think\facade\Db;
 use IEXBase\TronAPI;
 use think\facade\Request;
 
-class Trx extends Base
+class Trc20 extends Base
 {
+    private $geturl ="https://api.trongrid.io";
     
+   
     /**
      * 查询trx余额
-     * http://127.0.0.203/api/trx/AddressBalance?address=TChFoH1BGwyRQbtouijE2BBCYjrCQfM3VV
+     * http://127.0.0.203/api/trc20/AddressBalance?address=TChFoH1BGwyRQbtouijE2BBCYjrCQfM3VV
      * address 必选 string address 
-     * return {"msg":"ok","data":{"amount":1895.09668},"code":1}
+     * return {"msg":"ok","data":{"amount":"983.500"},"code":1}
      */
     function AddressBalance(){
         $conifg = Config('trx');
-        $geturl = new TronAPI\Provider\HttpProvider($conifg['url']);
+        $geturl = new TronAPI\Provider\HttpProvider($this->geturl);
         $fullNode = $geturl;
         $solidityNode = $geturl;
         $eventServer = $geturl;
@@ -34,25 +36,28 @@ class Trx extends Base
         $params = $this->request->param();
         $address = trim($params['address']);
         if(!$address){return json(getJson('地址不能为空',0));}
-        $tron->setAddress($address);
-        $balance = $tron->getBalance(null, true);
+        //合约地址
+        $contract = $tron->contract('TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t');  // Tether USDT https://tronscan.org/#/token20/TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+       // $contract = $tron->contract('TF17BgPaZYbz8oxbjhriubPDsA7ArKoLX3');  //  jst https://tronscan.org/#/token20/TF17BgPaZYbz8oxbjhriubPDsA7ArKoLX3
+        $balance = $contract->balanceOf($address);
+        $balance =sprintf("%.03f", $balance);
         $data =array('amount'=>$balance);
         return json(getJson('ok',1,$data));
 
     }
 
     /**
-     * TRX转账 
+     * USDT转账 
      * @catalog 自动文档/交易订单
-     * @title TRX转账
-     * @description TRX转账的接口
+     * @title USDT转账
+     * @description USDT转账的接口
      * @method post
-     * @url 接口域名/api/trx/send
-     * @data http://127.0.0.203/api/trx/send?from_address=TF6G3uUhJGyaVLBzwjV66YaMAXkAvsamKH&address=TSmqHU26sgNFBxkx13QBEPGwUeoCJZs7Hp&amount=2.6
+     * @url 接口域名/api/trc20/send
+     * @data http://127.0.0.203/api/trc20/send?from_address=TF6G3uUhJGyaVLBzwjV66YaMAXkAvsamKH&address=TANLLpnqPMSuZTYeoe2rCuPw1R6usnHTJH&amount=3.2
      * @param amount 必选 string amount 
      * @param from_address 必选 string from_address 
      * @param address 必选 string address 
-     * @return {"code":1,"msg":"转账成功"}
+     * @return {"msg":"转账成功","data":{"from_address":"TF6G3uUhJGyaVLBzwjV66YaMAXkAvsamKH","address":"TANLLpnqPMSuZTYeoe2rCuPw1R6usnHTJH","amount":3.2,"url":"https:\/\/nile.trongrid.io","txid":"c4f6720f754519adb734d70dffaa745fe9b87ad2a301bfd049fd0147182f00b4","symbol":"usdt","type":2,"add_time":1731639507,"transfer":{"result":true,"txid":"c4f6720f754519adb734d70dffaa745fe9b87ad2a301bfd049fd0147182f00b4","visible":false,"txID":"c4f6720f754519adb734d70dffaa745fe9b87ad2a301bfd049fd0147182f00b4","raw_data":{"contract":[{"parameter":{"value":{"data":"a9059cbb000000000000000000000041045fb1e5336ac98ea9a1a91404ef1827d76779040000000000000000000000000000000000000000000000002c68af0bb1400000","owner_address":"41382e15fd316598ddf6c97997ff36b83a4bec5a7c","contract_address":"4137349aeb75a32f8c4c090daff376cf975f5d2eba"},"type_url":"type.googleapis.com\/protocol.TriggerSmartContract"},"type":"TriggerSmartContract"}],"ref_block_bytes":"b82e","ref_block_hash":"6d85e1dabd436658","expiration":1731639564000,"fee_limit":10000000,"timestamp":1731639505562},"raw_data_hex":"0a02b82e22086d85e1dabd43665840e0ad8beeb2325aae01081f12a9010a31747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e54726967676572536d617274436f6e747261637412740a1541382e15fd316598ddf6c97997ff36b83a4bec5a7c12154137349aeb75a32f8c4c090daff376cf975f5d2eba2244a9059cbb000000000000000000000041045fb1e5336ac98ea9a1a91404ef1827d76779040000000000000000000000000000000000000000000000002c68af0bb1400000709ae587eeb232900180ade204","signature":["70a44981cb8af3d10b24348338827b5dfb3b268fca96a8484a41b19b740ec0e5981fac5fb37db64ea39379d58838a2ca1b9c2390604d766453f2f371479753f000"]}},"code":1}
      * @remark 这里是备注信息
      * @number 3
      */
@@ -74,16 +79,16 @@ class Trx extends Base
         }
 
         $params['key'] = $userdata['key'];
-        $params['url'] = $conifg['url'];
-        //print_r($userdata);
-        $transfer = $this->transfer($params);//调用转账
+        $params['url'] = $this->geturl;
+        //print_r($params);
+        $transfer = $this->concarttransfer($params);//调用转账
         if( isset($transfer['code'])){
             return json(getJson('转账失败',0,$transfer));
         }
 
         $params['txid'] = $transfer['txid'];
-        $params['symbol'] = 'trx';//类型
-        $params['type'] = $type['trx'];//类型id 1:trx 2:usdt 3:jst
+        $params['symbol'] = 'usdt';//类型
+        $params['type'] = $type['usdt'];//类型id 1:trx 2:usdt 3:jst
         
         $params['add_time'] = time();
         $symbol = $params['symbol'];
@@ -103,16 +108,15 @@ class Trx extends Base
     }
 
     /**
-     * 交易
+     * 合约转账
      * $data['from_address'];
      * $data['key'];
      * $data['address'];
      * $data['amount'];
      * $data['key'];
      * $data['url'];
-     * 
      */
-    function  transfer(array $data ) :array{
+    function concarttransfer(array $data):array{
         $url =$data['url'];
         $fullNode = new TronAPI\Provider\HttpProvider($url);
         $solidityNode =  $fullNode;
@@ -122,17 +126,20 @@ class Trx extends Base
         } catch (TronAPI\Exception\TronException $e) {
             return $e->getMessage();
         }
-        $tron->setAddress($data['from_address']);
+        //合约地址
+        $contract = $tron->contract('TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t');  // Tether USDT https://tronscan.org/#/token20/TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t
+        //$contract = $tron->contract('TF17BgPaZYbz8oxbjhriubPDsA7ArKoLX3');  //  jst https://tronscan.org/#/token20/TF17BgPaZYbz8oxbjhriubPDsA7ArKoLX3
         $tron->setPrivateKey($data['key']);
-
         try {
-            $transfer = $tron->send($data['address'],$data['amount']);
+            $transfer = $contract->transfer($data['address'],$data['amount'], $data['from_address']);
         } catch (TronAPI\Exception\TronException $e) {
             return $e->getMessage();
         }
+        
         return $transfer;
-
     }
+
+   
 
     /**
      * 扫区块转账 
@@ -140,7 +147,7 @@ class Trx extends Base
      * @title 扫区块转账交易
      * @description 扫区块转账交易
      * @method get
-     * @url 接口域名http://127.0.0.203/api/trx/notify?from_address=TF6G3uUhJGyaVLBzwjV66YaMAXkAvsamKH&address=TChFoH1BGwyRQbtouijE2BBCYjrCQfM3VV&txid=82225222&amount=5
+     * @url 接口域名http://127.0.0.203/api/trc20/notify?from_address=TF6G3uUhJGyaVLBzwjV66YaMAXkAvsamKH&address=TChFoH1BGwyRQbtouijE2BBCYjrCQfM3VV&txid=82225222&amount=5
      * @param txid 必选 string txid 
      * @param amount 必选 string amount 
      * @param from_address 必选 string from_address 
@@ -158,8 +165,8 @@ class Trx extends Base
 
         $conifg = Config('trx');
         $type = $conifg['type'];
-        $params['type'] = $type['trx'];
-        $params['symbol'] = 'trx';
+        $params['type'] = $type['usdt'];
+        $params['symbol'] = 'usdt';
         $params['add_time'] = time();
         
         if(!$params['txid'] or !$params['address']  or !$params['from_address'] or !$params['amount']){
@@ -198,7 +205,7 @@ class Trx extends Base
         if($data = OrderService::add($params)){
             $amount = $params['amount'];
             $userdata = Db::name('address')->where(['address'=>$params['address'] ])->find();
-            Db::name('address')->where(['address'=>$params['address'] ])->update(['trx' => $userdata['trx'] + $amount ]  );
+            Db::name('address')->where(['address'=>$params['address'] ])->update(['usdt' => $userdata['usdt'] + $amount ]  );
             return true;
         }else{
             return false;
