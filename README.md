@@ -5,7 +5,7 @@
 - Tron-api-Tron接口源码-PHP版-ThinkPHP5-layui版，如果你想得到这个源码，你可以通过你的tron钱包（myaddress：TSPuEaWv1JM51r1yznPRRa9yPJRz96aHYA）给我转USDT（300U），然后你可以通过Telegram（https ://t.me/zhang8080）或者email（cqhaibo800@gmail.com）或者qq（386378183@gmail.com）联系我获取源码，只要部署成功，就可以通过api调用所有接口,重点解决：生成钱包地址，USDT交易转账，扫区块链对地址异步通知。
 
 # tronapi:当前最新版Tron-api-波场接口源码-PHP版本-ThinkPHP5 版本。
-### 温馨提示：本仓库代码为本人维护的最新代码，区别于别的仓库的代码，请勿买盗版，盗版有后门概不负责。
+文档地址：https://pchaibo.github.io/Tron-api
 ===============
 >### 1.运行环境要求PHP7.4
 >### 2.安装gmp扩展，否则转账不成功
