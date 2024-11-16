@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>TxId交易哈希 · GitBook</title>
+        <title>交易哈希查询 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../trx/block.html" />
     
-    <link rel="prev" href="send.html" />
+    
+    <link rel="prev" href="../trx/send.html" />
     
 
     </head>
@@ -84,6 +86,8 @@
     
 
     
+        
+        <li class="header">api</li>
         
         
     
@@ -131,7 +135,7 @@
                 <a href="balance.html">
             
                     
-                    获取USDT余额接口
+                    获取USDT余额
             
                 </a>
             
@@ -139,12 +143,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="send.html">
+        <li class="chapter " data-level="1.5" data-path="../trx/balance.html">
+            
+                <a href="../trx/balance.html">
+            
+                    
+                    查询TRX余额
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="send.html">
             
                 <a href="send.html">
             
                     
-                    USDT转账接口
+                    USDT转账
             
                 </a>
             
@@ -152,12 +169,38 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="search.html">
+        <li class="chapter " data-level="1.7" data-path="../trx/send.html">
+            
+                <a href="../trx/send.html">
+            
+                    
+                    TRX转账
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="search.html">
             
                 <a href="search.html">
             
                     
-                    TxId交易哈希
+                    交易哈希查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../trx/block.html">
+            
+                <a href="../trx/block.html">
+            
+                    
+                    扫最新区块
             
                 </a>
             
@@ -195,7 +238,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >TxId交易哈希</a>
+        <a href=".." >交易哈希查询</a>
     </h1>
 </div>
 
@@ -211,6 +254,68 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="txid&#x4EA4;&#x6613;&#x54C8;&#x5E0C;">TxId&#x4EA4;&#x6613;&#x54C8;&#x5E0C;</h1>
+<h5 id="&#x8BF7;&#x6C42;url">&#x8BF7;&#x6C42;URL</h5>
+<ul>
+<li><code>http://127.0.0.203/api/trx/find?txid=14c59c250b91d54a928887928fb2242608b6bd4f24c3c83cddd72d18b0c04026</code></li>
+</ul>
+<h5 id="&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;">&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</h5>
+<ul>
+<li>GET </li>
+</ul>
+<h5 id="&#x8FD4;&#x56DE;&#x793A;&#x4F8B;">&#x8FD4;&#x56DE;&#x793A;&#x4F8B;</h5>
+<pre><code>{
+  &quot;msg&quot;: &quot;&#x8BB0;&#x5F55;&#x67E5;&#x8BE2;&#x6210;&#x529F;&quot;,
+  &quot;data&quot;: {
+    &quot;ret&quot;: [
+      {
+        &quot;contractRet&quot;: &quot;SUCCESS&quot;
+      }
+    ],
+    &quot;signature&quot;: [
+      &quot;0e349d6b809345566458a1827648358b26df9286abc094e4bf0480132823609c7bf272540c4d29f2b25cbb38066ac27c6256185383ba61a361eed16f96e1825c00&quot;
+    ],
+    &quot;txID&quot;: &quot;14c59c250b91d54a928887928fb2242608b6bd4f24c3c83cddd72d18b0c04026&quot;,
+    &quot;raw_data&quot;: {
+      &quot;contract&quot;: [
+        {
+          &quot;parameter&quot;: {
+            &quot;value&quot;: {
+              &quot;data&quot;: &quot;a9059cbb000000000000000000000041045fb1e5336ac98ea9a1a91404ef1827d767790400000000000000000000000000000000000000000000000024150e3980040000&quot;,
+              &quot;owner_address&quot;: &quot;41382e15fd316598ddf6c97997ff36b83a4bec5a7c&quot;,
+              &quot;contract_address&quot;: &quot;4137349aeb75a32f8c4c090daff376cf975f5d2eba&quot;
+            },
+            &quot;type_url&quot;: &quot;type.googleapis.com/protocol.TriggerSmartContract&quot;
+          },
+          &quot;type&quot;: &quot;TriggerSmartContract&quot;
+        }
+      ],
+      &quot;ref_block_bytes&quot;: &quot;b7e3&quot;,
+      &quot;ref_block_hash&quot;: &quot;eeb8abdfc99bb118&quot;,
+      &quot;expiration&quot;: 1731639330000,
+      &quot;fee_limit&quot;: 10000000,
+      &quot;timestamp&quot;: 1731639271451
+    },
+    &quot;raw_data_hex&quot;: &quot;0a02b7e32208eeb8abdfc99bb11840d089fdedb2325aae01081f12a9010a31747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e54726967676572536d617274436f6e747261637412740a1541382e15fd316598ddf6c97997ff36b83a4bec5a7c12154137349aeb75a32f8c4c090daff376cf975f5d2eba2244a9059cbb000000000000000000000041045fb1e5336ac98ea9a1a91404ef1827d767790400000000000000000000000000000000000000000000000024150e3980040000709bc0f9edb232900180ade204&quot;
+  },
+  &quot;code&quot;: 1
+}
+</code></pre><h5 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;&#x540D;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">contractRet</td>
+<td style="text-align:left">string</td>
+<td>SUCCESS&#xFF1A;&#x8868;&#x793A;&#x8F6C;&#x8D26;&#x6210;&#x529F;</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -238,10 +343,14 @@
 
             
                 
-                <a href="send.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: USDT转账接口">
+                <a href="../trx/send.html" class="navigation navigation-prev " aria-label="Previous page: TRX转账">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../trx/block.html" class="navigation navigation-next " aria-label="Next page: 扫最新区块">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -250,7 +359,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TxId交易哈希","level":"1.6","depth":1,"previous":{"title":"USDT转账接口","level":"1.5","depth":1,"path":"trc20/send.md","ref":"trc20/send.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"trc20/search.md","mtime":"2024-11-16T07:18:02.176Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-16T08:14:06.053Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"交易哈希查询","level":"1.8","depth":1,"next":{"title":"扫最新区块","level":"1.9","depth":1,"path":"trx/block.md","ref":"trx/block.md","articles":[]},"previous":{"title":"TRX转账","level":"1.7","depth":1,"path":"trx/send.md","ref":"trx/send.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"trc20/search.md","mtime":"2024-11-16T08:57:32.369Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-16T09:18:25.968Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
