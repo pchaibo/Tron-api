@@ -1,3 +1,7 @@
+---
+description:  获取USDT余额接口_Tron-trc20-trx-usdt波场接口源码-PHP版本-ThinkPHP5 layui 安装环境要求
+---
+
 # 获取USDT余额接口
 
 

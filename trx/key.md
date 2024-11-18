@@ -1,3 +1,7 @@
+---
+description: 波场key设置 Tron_api最新版Tron-trc20-trx-usdt波场接口源码-PHP版本-ThinkPHP5 layui 
+---
+
 # 波场key设置
 
 ### 以下是apikey的调整的地方，扫描TRX区块设置KEY，不设置后面量大了可能有限制，[官方文档](https://developers.tron.network/reference/background#note)
