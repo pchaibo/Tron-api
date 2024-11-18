@@ -4,17 +4,21 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>交易哈希查询 · GitBook</title>
+        <title>交易查询接口 · TRON API TRC20 USDT 接口</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Telegram: @zhang8080">
         
         
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
@@ -34,19 +38,12 @@
 
     
         
-    
-        
-    
-        
-    
-        
-    
-        
-    
+        <link rel="stylesheet" href="../trxstatic/website.css">
         
     
 
         
+    
     
     
     <meta name="HandheldFriendly" content="true"/>
@@ -57,10 +54,25 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../trx/block.html" />
+    
+    <link rel="prev" href="send.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../trxstatic/favicon.ico' type="image/x-icon">
     
     
-    <link rel="prev" href="../trx/send.html" />
+        <link rel="bookmark" href='../trxstatic/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../trxstatic/favicon.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../trxstatic/favicon.ico">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../trxstatic/favicon.ico">
+        
     
 
     </head>
@@ -87,8 +99,6 @@
 
     
         
-        <li class="header">api</li>
-        
         
     
         <li class="chapter " data-level="1.1" data-path="../">
@@ -96,7 +106,9 @@
                 <a href="../">
             
                     
-                    Trx api 接口文档
+                        <b>1.1.</b>
+                    
+                    Tron接口文档
             
                 </a>
             
@@ -109,7 +121,9 @@
                 <a href="Install.html">
             
                     
-                    安装环境要求
+                        <b>1.2.</b>
+                    
+                    安装环境设置
             
                 </a>
             
@@ -117,10 +131,43 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="address.html">
+        <li class="chapter " data-level="1.3" data-path="../trx/key.html">
+            
+                <a href="../trx/key.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    波场key设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                        <b>1.4.</b>
+                    
+                    USDT交易接口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="address.html">
             
                 <a href="address.html">
             
+                    
+                        <b>1.4.1.</b>
                     
                     生成地址接口
             
@@ -130,10 +177,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="balance.html">
+        <li class="chapter " data-level="1.4.2" data-path="balance.html">
             
                 <a href="balance.html">
             
+                    
+                        <b>1.4.2.</b>
                     
                     获取USDT余额
             
@@ -143,10 +192,78 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../trx/balance.html">
+        <li class="chapter " data-level="1.4.3" data-path="send.html">
+            
+                <a href="send.html">
+            
+                    
+                        <b>1.4.3.</b>
+                    
+                    USDT转账接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="search.html">
+            
+                <a href="search.html">
+            
+                    
+                        <b>1.4.4.</b>
+                    
+                    交易查询接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                        <b>1.5.</b>
+                    
+                    Trx交易接口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="address.html">
+            
+                <a href="address.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    生成地址接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../trx/balance.html">
             
                 <a href="../trx/balance.html">
             
+                    
+                        <b>1.5.2.</b>
                     
                     查询TRX余额
             
@@ -156,25 +273,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="send.html">
-            
-                <a href="send.html">
-            
-                    
-                    USDT转账
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.7" data-path="../trx/send.html">
+        <li class="chapter " data-level="1.5.3" data-path="../trx/send.html">
             
                 <a href="../trx/send.html">
             
                     
-                    TRX转账
+                        <b>1.5.3.</b>
+                    
+                    TRX转账接口
             
                 </a>
             
@@ -182,12 +288,14 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="search.html">
+        <li class="chapter active" data-level="1.5.4" data-path="search.html">
             
                 <a href="search.html">
             
                     
-                    交易哈希查询
+                        <b>1.5.4.</b>
+                    
+                    交易查询接口
             
                 </a>
             
@@ -195,12 +303,49 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="../trx/block.html">
+
+            </ul>
             
-                <a href="../trx/block.html">
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../trx/phpblock.html">
+            
+                <a href="../trx/phpblock.html">
             
                     
-                    扫最新区块
+                        <b>1.6.</b>
+                    
+                    php  扫最新区块交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../trx/goblock.html">
+            
+                <a href="../trx/goblock.html">
+            
+                    
+                        <b>1.7.</b>
+                    
+                    golang扫最新区块交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../trx/tel.html">
+            
+                <a href="../trx/tel.html">
+            
+                    
+                        <b>1.8.</b>
+                    
+                    联系我们 Tg：@zhang8080
             
                 </a>
             
@@ -238,7 +383,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >交易哈希查询</a>
+        <a href=".." >交易查询接口</a>
     </h1>
 </div>
 
@@ -263,43 +408,44 @@
 <li>GET </li>
 </ul>
 <h5 id="&#x8FD4;&#x56DE;&#x793A;&#x4F8B;">&#x8FD4;&#x56DE;&#x793A;&#x4F8B;</h5>
-<pre><code>{
-  &quot;msg&quot;: &quot;&#x8BB0;&#x5F55;&#x67E5;&#x8BE2;&#x6210;&#x529F;&quot;,
-  &quot;data&quot;: {
-    &quot;ret&quot;: [
+<pre><code class="lang-js">{
+  <span class="hljs-string">&quot;msg&quot;</span>: <span class="hljs-string">&quot;&#x8BB0;&#x5F55;&#x67E5;&#x8BE2;&#x6210;&#x529F;&quot;</span>,
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;ret&quot;</span>: [
       {
-        &quot;contractRet&quot;: &quot;SUCCESS&quot;
+        <span class="hljs-string">&quot;contractRet&quot;</span>: <span class="hljs-string">&quot;SUCCESS&quot;</span>
       }
     ],
-    &quot;signature&quot;: [
-      &quot;0e349d6b809345566458a1827648358b26df9286abc094e4bf0480132823609c7bf272540c4d29f2b25cbb38066ac27c6256185383ba61a361eed16f96e1825c00&quot;
+    <span class="hljs-string">&quot;signature&quot;</span>: [
+      <span class="hljs-string">&quot;0e349d6b809345566458a1827648358b26df9286abc094e4bf0480132823609c7bf272540c4d29f2b25cbb38066ac27c6256185383ba61a361eed16f96e1825c00&quot;</span>
     ],
-    &quot;txID&quot;: &quot;14c59c250b91d54a928887928fb2242608b6bd4f24c3c83cddd72d18b0c04026&quot;,
-    &quot;raw_data&quot;: {
-      &quot;contract&quot;: [
+    <span class="hljs-string">&quot;txID&quot;</span>: <span class="hljs-string">&quot;14c59c250b91d54a928887928fb2242608b6bd4f24c3c83cddd72d18b0c04026&quot;</span>,
+    <span class="hljs-string">&quot;raw_data&quot;</span>: {
+      <span class="hljs-string">&quot;contract&quot;</span>: [
         {
-          &quot;parameter&quot;: {
-            &quot;value&quot;: {
-              &quot;data&quot;: &quot;a9059cbb000000000000000000000041045fb1e5336ac98ea9a1a91404ef1827d767790400000000000000000000000000000000000000000000000024150e3980040000&quot;,
-              &quot;owner_address&quot;: &quot;41382e15fd316598ddf6c97997ff36b83a4bec5a7c&quot;,
-              &quot;contract_address&quot;: &quot;4137349aeb75a32f8c4c090daff376cf975f5d2eba&quot;
+          <span class="hljs-string">&quot;parameter&quot;</span>: {
+            <span class="hljs-string">&quot;value&quot;</span>: {
+              <span class="hljs-string">&quot;data&quot;</span>: <span class="hljs-string">&quot;a9059cbb000000000000000000000041045fb1e5336ac98ea9a1a91404ef1827d767790400000000000000000000000000000000000000000000000024150e3980040000&quot;</span>,
+              <span class="hljs-string">&quot;owner_address&quot;</span>: <span class="hljs-string">&quot;41382e15fd316598ddf6c97997ff36b83a4bec5a7c&quot;</span>,
+              <span class="hljs-string">&quot;contract_address&quot;</span>: <span class="hljs-string">&quot;4137349aeb75a32f8c4c090daff376cf975f5d2eba&quot;</span>
             },
-            &quot;type_url&quot;: &quot;type.googleapis.com/protocol.TriggerSmartContract&quot;
+            <span class="hljs-string">&quot;type_url&quot;</span>: <span class="hljs-string">&quot;type.googleapis.com/protocol.TriggerSmartContract&quot;</span>
           },
-          &quot;type&quot;: &quot;TriggerSmartContract&quot;
+          <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;TriggerSmartContract&quot;</span>
         }
       ],
-      &quot;ref_block_bytes&quot;: &quot;b7e3&quot;,
-      &quot;ref_block_hash&quot;: &quot;eeb8abdfc99bb118&quot;,
-      &quot;expiration&quot;: 1731639330000,
-      &quot;fee_limit&quot;: 10000000,
-      &quot;timestamp&quot;: 1731639271451
+      <span class="hljs-string">&quot;ref_block_bytes&quot;</span>: <span class="hljs-string">&quot;b7e3&quot;</span>,
+      <span class="hljs-string">&quot;ref_block_hash&quot;</span>: <span class="hljs-string">&quot;eeb8abdfc99bb118&quot;</span>,
+      <span class="hljs-string">&quot;expiration&quot;</span>: <span class="hljs-number">1731639330000</span>,
+      <span class="hljs-string">&quot;fee_limit&quot;</span>: <span class="hljs-number">10000000</span>,
+      <span class="hljs-string">&quot;timestamp&quot;</span>: <span class="hljs-number">1731639271451</span>
     },
-    &quot;raw_data_hex&quot;: &quot;0a02b7e32208eeb8abdfc99bb11840d089fdedb2325aae01081f12a9010a31747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e54726967676572536d617274436f6e747261637412740a1541382e15fd316598ddf6c97997ff36b83a4bec5a7c12154137349aeb75a32f8c4c090daff376cf975f5d2eba2244a9059cbb000000000000000000000041045fb1e5336ac98ea9a1a91404ef1827d767790400000000000000000000000000000000000000000000000024150e3980040000709bc0f9edb232900180ade204&quot;
+    <span class="hljs-string">&quot;raw_data_hex&quot;</span>: <span class="hljs-string">&quot;0a02b7e32208eeb8abdfc99bb11840d089fdedb2325aae01081f12a9010a31747970652e676f6f676c65617069732e636f6d2f70726f746f636f6c2e54726967676572536d617274436f6e747261637412740a1541382e15fd316598ddf6c97997ff36b83a4bec5a7c12154137349aeb75a32f8c4c090daff376cf975f5d2eba2244a9059cbb000000000000000000000041045fb1e5336ac98ea9a1a91404ef1827d767790400000000000000000000000000000000000000000000000024150e3980040000709bc0f9edb232900180ade204&quot;</span>
   },
-  &quot;code&quot;: 1
+  <span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-number">1</span>
 }
-</code></pre><h5 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</h5>
+</code></pre>
+<h5 id="&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x8FD4;&#x56DE;&#x53C2;&#x6570;&#x8BF4;&#x660E;</h5>
 <table>
 <thead>
 <tr>
@@ -343,14 +489,10 @@
 
             
                 
-                <a href="../trx/send.html" class="navigation navigation-prev " aria-label="Previous page: TRX转账">
+                <a href="send.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: USDT转账接口">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../trx/block.html" class="navigation navigation-next " aria-label="Next page: 扫最新区块">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -359,7 +501,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"交易哈希查询","level":"1.8","depth":1,"next":{"title":"扫最新区块","level":"1.9","depth":1,"path":"trx/block.md","ref":"trx/block.md","articles":[]},"previous":{"title":"TRX转账","level":"1.7","depth":1,"path":"trx/send.md","ref":"trx/send.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"trc20/search.md","mtime":"2024-11-16T08:57:32.369Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-16T09:18:25.968Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"交易查询接口","level":"1.4.4","depth":2,"next":{"title":"Trx交易接口","level":"1.5","depth":1,"ref":"","articles":[{"title":"生成地址接口","level":"1.5.1","depth":2,"path":"trc20/address.md","ref":"trc20/address.md","articles":[]},{"title":"查询TRX余额","level":"1.5.2","depth":2,"path":"trx/balance.md","ref":"trx/balance.md","articles":[]},{"title":"TRX转账接口","level":"1.5.3","depth":2,"path":"trx/send.md","ref":"trx/send.md","articles":[]},{"title":"交易查询接口","level":"1.5.4","depth":2,"path":"trc20/search.md","ref":"trc20/search.md","articles":[]}]},"previous":{"title":"USDT转账接口","level":"1.4.3","depth":2,"path":"trc20/send.md","ref":"trc20/send.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","advanced-emoji","livereload"],"styles":{"website":"trxstatic/website.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"trxstatic/favicon.ico","bookmark":"trxstatic/favicon.ico","appleTouch":"trxstatic/favicon.ico","appleTouchMore":{"120x120":"trxstatic/favicon.ico","180x180":"trxstatic/favicon.ico"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"Telegram: @zhang8080","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"TRON API TRC20 USDT 接口","gitbook":"*","description":"Tron-api-usdt波场接口源码-PHP版本-ThinkPHP5 layui"},"file":{"path":"trc20/search.md","mtime":"2024-11-18T06:36:00.953Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-18T06:54:12.497Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
