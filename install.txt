@@ -1,0 +1,11 @@
+gitbook 安装
+node 10版本
+npm install gitbook-cli -g
+查看版本
+gitbook -V
+
+运行
+gitbook serve ./
+
+编译
+gitbook build 
