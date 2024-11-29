@@ -9,3 +9,9 @@ gitbook serve ./
 
 编译
 gitbook build 
+
+安装插件
+gitbook install
+
+#pdf https://calibre-ebook.com/download_windows
+gitbook pdf ./ ./mybook.pdf

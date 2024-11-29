@@ -12,12 +12,17 @@
         
         
     
+    
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
                 
             
                 
@@ -40,6 +45,9 @@
         
         <link rel="stylesheet" href="../trxstatic/website.css">
         
+    
+
+
     
 
         
@@ -110,7 +118,7 @@
                     
                         <b>1.1.</b>
                     
-                    Tron接口文档
+                    Tronapi接口文档
             
                 </a>
             
@@ -402,10 +410,19 @@
                                 
                                 <h1 id="&#x626B;&#x6700;&#x65B0;&#x533A;&#x5757;&#xFF08;php&#x4E0E;golang&#xFF09;&#x9009;&#x62E9;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;">&#x626B;&#x6700;&#x65B0;&#x533A;&#x5757;&#xFF08;php&#x4E0E;golang&#xFF09;&#x9009;&#x62E9;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;</h1>
 <h3 id="&#x4F7F;&#x7528;golang&#x81EA;&#x52A8;&#x626B;&#x533A;&#x5757;&#x4FDD;&#x8BC1;&#x533A;&#x5757;&#xFF0C;&#x67E5;&#x8BE2;&#x5730;&#x5740;&#x6709;&#x4EA4;&#x6613;&#x8BB0;&#x5F55;&#x505A;&#x540E;&#x53F0;&#x901A;&#x77E5;">&#x4F7F;&#x7528;golang&#x81EA;&#x52A8;&#x626B;&#x533A;&#x5757;&#x4FDD;&#x8BC1;&#x533A;&#x5757;&#xFF0C;&#x67E5;&#x8BE2;&#x5730;&#x5740;&#x6709;&#x4EA4;&#x6613;&#x8BB0;&#x5F55;&#x505A;&#x540E;&#x53F0;&#x901A;&#x77E5;</h3>
-<h3 id="shell-&#x6267;&#x884C;main&#x6587;&#x4EF6;&#x540E;&#x53F0;&#x8FD0;&#x884C;">shell &#x6267;&#x884C;main&#x6587;&#x4EF6;&#x540E;&#x53F0;&#x8FD0;&#x884C;</h3>
+<h3 id="&#x914D;&#x7F6E;&#x5F02;&#x6B65;&#x901A;&#x4EE3;&#x7801;&#x6587;&#x4EF6;-goblockenv">&#x914D;&#x7F6E;&#x5F02;&#x6B65;&#x901A;&#x4EE3;&#x7801;&#x6587;&#x4EF6; ./goblock/.env</h3>
 <pre><code class="lang-bash">
-nohup ./main &gt;/dev/null 2&gt;&amp;1 &amp;
+<span class="hljs-comment">#&#x5F02;&#x6B65;&#x901A;&#x77E5;&#x7F51;&#x7AD9;&#x57DF;&#x540D;url</span>
+Stie = https://test.appusdt.xyz
+
+<span class="hljs-comment">#&#x6CE2;&#x573A;&#x7533;&#x8BF7;key</span>
+TRONAPI_KEY = 5f228046-7d8d-472c<span class="hljs-_">-a</span>7b0-ce1a8402cfee
 </code></pre>
+<h3 id="&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;">&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;</h3>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> ./goblock
+sh start.sh
+</code></pre>
+<h4 id="&#x81EA;&#x5DF1;&#x559C;&#x6B22;&#x53EF;&#x4EE5;&#x66F4;&#x6539;&#x539F;&#x4EE3;&#x7801;">&#x81EA;&#x5DF1;&#x559C;&#x6B22;&#x53EF;&#x4EE5;&#x66F4;&#x6539;&#x539F;&#x4EE3;&#x7801;</h4>
 
                                 
                                 </section>
@@ -449,17 +466,22 @@ nohup ./main &gt;/dev/null 2&gt;&amp;1 &amp;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"扫最新区块golang选择一种方法 Tron_api最新版Tron-trc20-trx-usdt波场接口源码-PHP版本-ThinkPHP5 layui","title":"golang扫最新区块交易","level":"1.7","depth":1,"next":{"title":"联系我们 Tg：@zhang8080","level":"1.8","depth":1,"path":"trx/tel.md","ref":"trx/tel.md","articles":[]},"previous":{"title":"php  扫最新区块交易","level":"1.6","depth":1,"path":"trx/phpblock.md","ref":"trx/phpblock.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","code","livereload"],"styles":{"website":"trxstatic/website.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"trxstatic/favicon.ico","bookmark":"trxstatic/favicon.ico","appleTouch":"trxstatic/favicon.ico","appleTouchMore":{"120x120":"trxstatic/favicon.ico","180x180":"trxstatic/favicon.ico"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"Telegram: @zhang8080","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"TRON API TRC20 USDT 接口","gitbook":"*"},"file":{"path":"trx/goblock.md","mtime":"2024-11-18T09:03:46.977Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-27T09:12:42.585Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"扫最新区块golang选择一种方法 Tron_api最新版Tron-trc20-trx-usdt波场接口源码-PHP版本-ThinkPHP5 layui","title":"golang扫最新区块交易","level":"1.7","depth":1,"next":{"title":"联系我们 Tg：@zhang8080","level":"1.8","depth":1,"path":"trx/tel.md","ref":"trx/tel.md","articles":[]},"previous":{"title":"php  扫最新区块交易","level":"1.6","depth":1,"path":"trx/phpblock.md","ref":"trx/phpblock.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","code","mermaid-gb3","livereload"],"styles":{"website":"trxstatic/website.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"favicon":{"shortcut":"trxstatic/favicon.ico","bookmark":"trxstatic/favicon.ico","appleTouch":"trxstatic/favicon.ico","appleTouchMore":{"120x120":"trxstatic/favicon.ico","180x180":"trxstatic/favicon.ico"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"Telegram: @zhang8080","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"TRON API TRC20 USDT 接口","gitbook":"*"},"file":{"path":"trx/goblock.md","mtime":"2024-11-28T05:51:36.940Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-29T03:35:40.258Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
         
         <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
         
     
         
@@ -490,6 +512,8 @@ nohup ./main &gt;/dev/null 2&gt;&amp;1 &amp;
         <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>
