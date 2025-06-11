@@ -1,5 +1,7 @@
-gitbook 安装
+﻿gitbook 安装
 node 10版本
+  nvm proxy 127.0.0.1:1080
+
 npm install gitbook-cli -g
 查看版本
 gitbook -V

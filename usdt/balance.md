@@ -1,14 +1,14 @@
 ---
-description: 查询TRX余额 Tron_api最新版Tron-trc20-trx-usdt波场接口源码-PHP版本-ThinkPHP5 layui 
+description:  获取USDT余额接口_Tron-trc20-trx-usdt波场接口源码-PHP版本-ThinkPHP5 layui 安装环境要求
 ---
 
-# 查询TRX余额
+# 获取USDT余额接口
 
 
 - 获取USDT余额接口
 
 ##### 请求URL
-- ` https://test.appusdt.xyz/api/trx/AddressBalance?address=TChFoH1BGwyRQbtouijE2BBCYjrCQfM3VV `
+- ` https://test.appusdt.xyz/api/trc20/AddressBalance?address=TChFoH1BGwyRQbtouijE2BBCYjrCQfM3VV `
   
 ##### 请求方式
 - GET 
@@ -36,4 +36,5 @@ description: 查询TRX余额 Tron_api最新版Tron-trc20-trx-usdt波场接口源
 |参数名|类型|说明|
 |:-----  |:-----|-----                           |
 |amount |float   |钱包USDT余额 |
+
 
