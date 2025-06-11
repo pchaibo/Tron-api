@@ -1,10 +1,9 @@
 ﻿
 # 提供波场TRON api 接口  trc20 usdt 支付接口代码，扫区块通知回调api
-# Tron-api-trx-trc20-tron-usdt-trc10
-- Tron-api-Tron interface source code-PHP version-ThinkPHP5-layui version. If you want to get this source code, you can transfer USDT (300U) to me through your tron ​​wallet (myaddress: TSPuEaWv1JM51r1yznPRRa9yPJRz96aHYA), and then you can contact me through Telegram (https://t.me/zhang8080) or email (cqhaibo800@gmail.com) or QQ (386378183@gmail.com) to get the source code. As long as the deployment is successful, all interfaces can be called through the api, focusing on: generating wallet addresses, USDT transaction transfers, scanning blockchains for asynchronous notifications of addresses.
-- Tron-api-Tron接口源码-PHP版-ThinkPHP5-layui版，如果你想得到这个源码，你可以通过你的tron钱包（myaddress：TSPuEaWv1JM51r1yznPRRa9yPJRz96aHYA）给我转USDT（300U），然后你可以通过Telegram（https ://t.me/zhang8080）或者email（cqhaibo800@gmail.com）或者qq（386378183@gmail.com）联系我获取源码，只要部署成功，就可以通过api调用所有接口,重点解决：生成钱包地址，USDT交易转账，扫区块链对地址异步通知。
+# Tron-api-trx-trc20-tron-usdt
+- Tron-api-Tron接口源码-PHP版-ThinkPHP，如果你想得到这个源码，你可以通过Telegram（https ://t.me/zhang8080）或者email（cqhaibo800@gmail.com）联系我获取源码，只要部署成功，就可以通过api调用所有接口,重点解决：生成钱包地址，USDT交易转账，扫区块链对地址异步通知。
 
-## tronapi:当前最新版Tron-api-波场接口源码-PHP版本-ThinkPHP5 版本。
+## tronapi:当前最新版Tron-api-波场接口源码-PHP版本
 ## 文档地址：https://pchaibo.github.io/Tron-api
 ===============
 >### 1.运行环境要求PHP7.4
