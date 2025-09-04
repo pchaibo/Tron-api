@@ -1,25 +1,38 @@
+ç½‘ç«™æ¥å£æ–‡æ¡£
+https://pchaibo.github.io/Tron-api/
 
-
-====ÔËĞĞ»·¾³====
+====è¿è¡Œç¯å¢ƒ====
 PHP >= 7.4.0
-
-¸ü¸Äphp.in 
+mysql >=5.6
+ngix 
+æ›´æ”¹php.ini
+å¢åŠ æ‰©å±•
 extension=gmp
 curl.cainfo ="./cacert.pem"
 
 
-====ÔËĞĞWEBÄ¿Â¼====
+====è¿è¡ŒWEBç›®å½•====
 public
 
-====Êı¾İ¿â====
-µ¼ÈëÄ¿Â¼ÏÂµÄ  db.sql ÎÄ¼ş
-ĞŞ¸ÄÄ¿Â¼ÏÂµÄ  .env Êı¾İ¿âÅäÖÃ
+====æ•°æ®åº“====
+å¯¼å…¥ç›®å½•ä¸‹çš„  /bak/bak.sql æ–‡ä»¶
+ä¿®æ”¹ç›®å½•ä¸‹çš„  .env æ•°æ®åº“é…ç½®
+Wss = åŸŸå
+HOSTNAME = 127.0.0.1
+DATABASE = tuadmin
+USERNAME = root
+PASSWORD = root
 
-
-====³õÊ¼ÕËºÅÃÜÂë====
+====åˆå§‹è´¦å·å¯†ç ====
+http://xx.com/admin/
 admin
 123456
 
+##############
+/gotrxrpc/.env
+é…ç½®æ‰«åŒºå—åŸŸå :Stie
+é…ç½®æ‰«åŒºå—key ï¼šTRONAPI_KEY
+æ‰§è¡Œ
+/gotrxrpc/goblock.exe 
 
-ThinkPHP6.0ÍêÈ«¿ª·¢ÊÖ²á
-https://www.kancloud.cn/manual/thinkphp6_0/
+
