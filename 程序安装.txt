@@ -10,9 +10,9 @@ ngix
 extension=gmp
 curl.cainfo ="./cacert.pem"
 
-
 ====运行WEB目录====
 public
+
 
 ====数据库====
 导入目录下的  /bak/bak.sql 文件
