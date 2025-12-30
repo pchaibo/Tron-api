@@ -8,7 +8,7 @@ description: 查询TRX余额 Tron_api最新版Tron-trc20-trx-usdt波场接口源
 - 获取USDT余额接口
 
 ##### 请求URL
-- ` https://test.appusdt.xyz/api/trx/AddressBalance?address=TChFoH1BGwyRQbtouijE2BBCYjrCQfM3VV `
+- ` https://usdt.liangcoin.com/api/trx/AddressBalance?address=TChFoH1BGwyRQbtouijE2BBCYjrCQfM3VV `
   
 ##### 请求方式
 - GET 

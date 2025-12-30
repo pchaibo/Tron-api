@@ -5,7 +5,7 @@ description: TxId交易哈希 Tron_api最新版Tron-trc20-trx-usdt波场接口�
 # TxId交易哈希
 
 ##### 请求URL
-- ` https://test.appusdt.xyz/api/trx/find?txid=14c59c250b91d54a928887928fb2242608b6bd4f24c3c83cddd72d18b0c04026 `
+- ` https://usdt.liangcoin.com/api/trx/find?txid=14c59c250b91d54a928887928fb2242608b6bd4f24c3c83cddd72d18b0c04026 `
   
 ##### 请求方式
 - GET 

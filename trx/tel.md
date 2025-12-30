@@ -3,7 +3,7 @@ description: 安装联系 Tron_api最新版Tron-trc20-trx-usdt波场接口源码
 ---
 
 ## 安装联系
-* 测试网站 https://test.appusdt.xyz
+* 测试网站 https://usdt.liangcoin.com
 * Telegram： [@zhang8080](https://t.me/zhang8080)
 * 邮箱:cqhaibo800@gmail.com
 ------------

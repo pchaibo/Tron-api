@@ -6,7 +6,7 @@ description: USDT转账接口 Tron_api最新版Tron-trc20-trx-usdt波场接口�
 *  转账从用户账户里扣除
 
 ##### 请求URL
-- ` https://test.appusdt.xyz/api/trc20/send?apikey=AC8D77F011F05AB4BD2E&address=TANLLpnqPMSuZTYeoe2rCuPw1R6usnHTJH&amount=6&type=usdt `
+- ` https://usdt.liangcoin.com/api/trc20/send?apikey=AC8D77F011F05AB4BD2E&address=TANLLpnqPMSuZTYeoe2rCuPw1R6usnHTJH&amount=6&type=usdt `
   
 ##### 请求方式
 - GET 

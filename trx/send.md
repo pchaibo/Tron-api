@@ -5,7 +5,7 @@ description: TRX转账查询 Tron_api最新版Tron-trc20-trx-usdt波场接口源
 # TRX转账
 
 ##### 请求URL
-- ` https://test.appusdt.xyz/api/trc20/send?apikey=AC8D77F011F05AB4BD2E&address=TQme4AecFkR5KxdWGvboiRZT7PWoMPvw4U&amount=6&type=trx `
+- ` https://usdt.liangcoin.com/api/trc20/send?apikey=AC8D77F011F05AB4BD2E&address=TQme4AecFkR5KxdWGvboiRZT7PWoMPvw4U&amount=6&type=trx `
   
 ##### 请求方式
 - GET 

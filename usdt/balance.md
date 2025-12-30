@@ -8,7 +8,7 @@ description:  获取USDT余额接口_Tron-trc20-trx-usdt波场接口源码-PHP�
 - 获取USDT余额接口
 
 ##### 请求URL
-- ` https://test.appusdt.xyz/api/trc20/AddressBalance?address=TChFoH1BGwyRQbtouijE2BBCYjrCQfM3VV `
+- ` https://usdt.liangcoin.com/api/trc20/AddressBalance?address=TChFoH1BGwyRQbtouijE2BBCYjrCQfM3VV `
   
 ##### 请求方式
 - GET 
